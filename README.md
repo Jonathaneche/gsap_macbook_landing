@@ -20,4 +20,13 @@ If you are developing a production application, we recommend using TypeScript wi
 - Zustand: npm install zustand clsx
 - Three.js: npm install three @react-three/drei @react-three/fiber
 
+## Additional steps
+- Models: we need to convert glb models to react components. We can do so by typing
+npm gltfjsx model.glb -T (The T flag will provide us a cleaner structure of the transformation)
+
+Ex.:
+npx gltfjsx macbook-14.glb -T
+
+Will ask us to install gltfjsx@6.5.3 if we do not have it already
+
 
