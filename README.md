@@ -19,6 +19,8 @@ If you are developing a production application, we recommend using TypeScript wi
 ## Additional tools
 - Zustand: npm install zustand clsx
 - Three.js: npm install three @react-three/drei @react-three/fiber
+- Gsap: npm install gsap @gsap/react 
+-     npm install react-responsive
 
 ## Additional steps
 - Models: we need to convert glb models to react components. We can do so by typing
