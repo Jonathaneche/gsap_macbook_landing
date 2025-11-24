@@ -5,7 +5,7 @@ import gsap from 'gsap';
 import MacbookModel16 from "../models/Macbook-16.jsx";
 import MacbookModel14 from "../models/Macbook-14.jsx";
 import {useGSAP} from "@gsap/react";
-const ANIMATION_DURATION = 1;
+const ANIMATION_DURATION = 2;
 const OFFSET_DISTANCE = 5;
 
 const fadeMeshes = (group, opacity) => {
@@ -28,10 +28,12 @@ const moveGroup = (group, x) => {
 const ModelSwitcher = ({scale, isMobile}) => {
     const SCALE_LARGE_DESKTOP = 0.08;
     const SCALE_LARGE_MOBILE = 0.05;
+
     const smallMacbookRef = useRef();
     const largeMacbookRef = useRef();
 
-    const showLargeMacbook = SCALE_LARGE_DESKTOP || SCALE_LARGE_MOBILE;
+    const showLargeMacbook = scale === SCALE_LARGE_DESKTOP || scale === SCALE_LARGE_MOBILE;
+
 
     useGSAP(()=> {
         if(showLargeMacbook){
